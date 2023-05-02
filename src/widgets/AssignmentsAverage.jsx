@@ -14,7 +14,6 @@ function SubjectSelector(props) {
 )};
 
 function SubjectDetails(props) {
-  console.log(JSON.stringify(props))
   return <div>
     <p>{subjects[props.name]["average-assignment"]}%</p>
   </div>
@@ -25,9 +24,6 @@ export default function AssignmentAverage() {
   const subject = subjects[subjectName];
 
   const handleSubjectSelect = (event) => {
-    console.log("event", event);
-    console.log("event target value", event.target.value);
-    // setSubjectName((event.target.label));
     setSubjectName(Object.keys(subjects)[event.target.value]);
   };
 
